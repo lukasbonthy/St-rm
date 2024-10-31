@@ -3,27 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St0rm</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Boxel</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 80%;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div class="main-container">
-        <h1 class="title">St0rm</h1>
-        <div class="round-boxes">
-            <div class="round-box">
-                <img src="background.png" alt="Background" class="box-background">
-                <a href="https://Selenite.com" class="box-button">Selenite</a>
-            </div>
-            <div class="round-box">
-                <img src="background.png" alt="Background" class="box-background">
-                <a href="https://Selenite.com" class="box-button">Selenite</a>
-            </div>
-            <div class="round-box">
-                <img src="background.png" alt="Background" class="box-background">
-                <a href="https://Selenite.com" class="box-button">Selenite</a>
-            </div>
+
+    <div class="container">
+        <h1>Boxel</h1>
+        <div class="box" onclick="window.location='https://selenite.com'">
+            <h2>Box 1</h2>
+            <p>Description for box 1.</p>
+        </div>
+        <div class="box" onclick="window.location='https://selenite.com'">
+            <h2>Box 2</h2>
+            <p>Description for box 2.</p>
+        </div>
+        <div class="box" onclick="window.location='https://selenite.com'">
+            <h2>Box 3</h2>
+            <p>Description for box 3.</p>
+        </div>
+        <div class="box" onclick="window.location='https://selenite.com'">
+            <h2>Box 4</h2>
+            <p>Description for box 4.</p>
         </div>
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>
